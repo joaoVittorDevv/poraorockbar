@@ -1,0 +1,318 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Porão Rock Bar</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel='stylesheet'>
+
+  <!-- Custom fonts for this template -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,600,700" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
+  <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+ 
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/grayscale.min.css' %}" rel="stylesheet">
+  <script>
+    addEventListener("load", function() {
+        setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    }
+
+</script>
+
+<!-- //Meta tag Keywords -->
+<!-- Custom-Files -->
+<!-- <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}"> -->
+<!-- Bootstrap-Core-CSS -->
+<!-- <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" /> -->
+<!-- Style-CSS -->
+<!-- font-awesome-icons -->
+<!-- <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet"> -->
+<!-- //font-awesome-icons -->
+<!-- /Fonts -->
+
+<!-- //Fonts -->
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Início</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">Sobre o Porão</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#menu">Cardápio</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#signup">Promoções</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#address">Endereço</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+      <div class="mx-auto text-center">
+        <!-- <h1 class="mx-auto my-0 text-uppercase">Grayscale</h1>
+        <h2 class="text-white-50 mx-auto mt-2 mb-5">A free, responsive, one page Bootstrap theme created by Start Bootstrap.</h2>
+        <a href="#about" class="btn btn-primary js-scroll-trigger">Get Started</a> -->
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="about-section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="text-white mb-4">Quem somos?</h2>
+          <p class="text-white-50">(Descrição sobre o bar e o estilo de vida) </p>
+        </div>
+      </div>
+      <!-- <img src="{% static 'img/chopp.png' %}" class="img-fluid" alt=""> -->
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <!-- <section id="menu" class="mid-sec py-5" id="menu">
+    <div class="container-fluid py-lg-5"> 
+        <div class="middile-inner-con">
+            <div class="tab-main mx-auto text-center">
+
+                <input id="tab1" type="radio" name="tabs" checked>
+                <label for="tab1"><span class="fa fa-align-center" aria-hidden="true"></span> Burgers</label>
+
+                <input id="tab2" type="radio" name="tabs">
+                <label for="tab2"><span class="fa fa-bolt" aria-hidden="true"></span> Fries</label>
+
+                <input id="tab3" type="radio" name="tabs">
+                <label for="tab3"><span class="fa fa-bitbucket" aria-hidden="true"></span> Drinks</label>
+
+                <section id="content1">
+                    <div class="ab-info row">
+                        <div class="col-md-3 ab-content">
+                            <div class="tab-wrap">
+                                <img src="{% static 'img/5.jpg' %}" alt="news image" class="img-fluid">
+                                <div class="ab-info-con">
+                                    <h4>Bacon Burger</h4>
+                                    <p class="price">$5.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ab-content">
+                            <div class="tab-wrap">
+                                <img src="{% static 'img/6.jpg' %}" alt="news image" class="img-fluid">
+                                <div class="ab-info-con">
+                                    <h4>Cheese Butter</h4>
+                                    <p class="price">$15.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ab-content">
+                            <div class="tab-wrap">
+                                <img src="{% static 'img/7.jpg' %}" alt="news image" class="img-fluid">
+                                <div class="ab-info-con">
+                                    <h4>Delicious sandwich</h4>
+                                    <p class="price">$25.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ab-content">
+                            <div class="tab-wrap">
+                                <img src="{% static 'img/6.jpg' %}" alt="news image" class="img-fluid">
+                                <div class="ab-info-con">
+                                    <h4>Delicious sandwich</h4>
+                                    <p class="price">$35.99</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section id="content2">
+
+                    <div class="ab-info row">
+                        <div class="col-md-3 ab-content">
+                            <div class="tab-wrap">
+                                <img src="{% static 'img/8.jpg' %}" alt="news image" class="img-fluid">
+                                <div class="ab-info-con">
+                                    <h4>Pene Salmone</h4>
+                                    <p class="price">$5.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ab-content">
+                            <div class="tab-wrap">
+                                <img src="{% static 'img/9.jpg' %}" alt="news image" class="img-fluid">
+                                <div class="ab-info-con">
+                                    <h4>Cheese Butter</h4>
+                                    <p class="price">$15.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ab-content">
+                            <div class="tab-wrap">
+                                <img src="{% static 'img/7.jpg' %}" alt="news image" class="img-fluid">
+                                <div class="ab-info-con">
+                                    <h4>Bolognese Pasta</h4>
+                                    <p class="price">$25.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ab-content">
+                            <div class="tab-wrap">
+                                <img src="{% static 'img/10.jpg' %}" alt="news image" class="img-fluid">
+                                <div class="ab-info-con">
+                                    <h4>Tagliatelle Molto</h4>
+                                    <p class="price">$35.99</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section id="content3">
+                    <div class="ab-info row">
+                        <div class="col-md-3 ab-content">
+                            <div class="tab-wrap">
+                                <img src="{% static 'img/11.jpg' %}" alt="news image" class="img-fluid">
+                                <div class="ab-info-con">
+                                    <h4>Cola Bottle</h4>
+                                    <p class="price">$5.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ab-content">
+                            <div class="tab-wrap">
+                                <img src="{% static 'img/12.jpg' %}" alt="news image" class="img-fluid">
+                                <div class="ab-info-con">
+                                    <h4>Fresh Lime</h4>
+                                    <p class="price">$15.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ab-content">
+                            <div class="tab-wrap">
+                                <img src="{% static 'img/11.jpg' %}" alt="news image" class="img-fluid">
+                                <div class="ab-info-con">
+                                    <h4>Cola Bottle</h4>
+                                    <p class="price">$25.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ab-content">
+                            <div class="tab-wrap">
+                                <img src="{% static 'img/12.jpg' %}" alt="news image" class="img-fluid">
+                                <div class="ab-info-con">
+                                    <h4>Kiwi Smoothie</h4>
+                                    <p class="price">$35.99</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+  <!-- Signup Section -->
+  <section id="signup" class="signup-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-lg-8 mx-auto text-center">
+
+          <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+          <h2 class="text-white mb-5">Se inscreva para receber as melhores promoções!</h2>
+
+          <form class="form-inline d-flex">
+            <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Coloque aqui seu melhor email!!!">
+            <button type="submit" class="btn btn-primary mx-auto">Inscrever</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="address" class="contact-section bg-black">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-12 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Endereço</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">Rua Marechal Floriano Peixoto, 263, Centro
+                83880000 Rio Negro, Parana, Brazil</div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="social d-flex justify-content-center">
+      <a href="https://instagram.com/barporaorock?igshid=1idiau4rcabfc" class="mx-2">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/poraorckbar/" class="mx-2 ">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black small text-center text-white-50">
+    <div class="container">
+      Copyright &copy; Porão Rock Bar 2020
+    </div>
+  </footer>
+
+ <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="{% static 'js/grayscale.min.js' %}"></script>
+
+</body>
+</html>

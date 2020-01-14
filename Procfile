@@ -1,0 +1,1 @@
+web: gunicorn poraoBar.wsgi --log-file -
