@@ -1,7 +1,7 @@
 from django.contrib import messages
 from django.db import IntegrityError
 from django.http import HttpResponseRedirect, HttpResponse
-from django.shortcuts import render, render_to_response
+from django.shortcuts import render
 from .forms import EmailForm
 from .models import Email
 
