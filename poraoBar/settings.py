@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'test_without_migrations',
+    'analytical',
     'poraoBar.core',
 ]
 
@@ -119,5 +120,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+
+GOOGLE_ANALYTICS_PROPERTY_ID = config('GOOGLE_ANALYTICS_PROPERTY_ID')
 STATIC_URL = '/static/'
 STATIC_ROOT =os.path.join(BASE_DIR, 'staticfiles')
