@@ -29,9 +29,20 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default=[], cast=Csv())
 
 
-# Application definition
+SHARED_APPS = (
+    'tenant_schemas',  # mandatory, should always be before any django app
+    'poraoBar.core', # you must list the app where your tenant model resides in
 
+    'django.contrib.contenttypes',
+
+)
+
+TENANT_APPS = (
+    'django.contrib.contenttypes',
+    'django.contrib.admin',
+)
 INSTALLED_APPS = [
+    'tenant_schemas',
     'admin_interface',
     'colorfield',
     'django.contrib.admin',
@@ -45,6 +56,8 @@ INSTALLED_APPS = [
     'poraoBar.core',
 ]
 
+TENANT_MODEL = []
+DEFAULT_FILE_STORAGE = 'tenant_schemas.storage.TenantFileSystemStorage'
 X_FRAME_OPTIONS='SAMEORIGIN'
 
 MIDDLEWARE = [
@@ -55,6 +68,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'tenant_schemas.middleware.TenantMiddleware',
 ]
 
 ROOT_URLCONF = 'poraoBar.urls'
@@ -84,9 +98,15 @@ WSGI_APPLICATION = 'poraoBar.wsgi.application'
 
 default_dburl = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
 DATABASES = {
-    'default' : config('DATABASE_URL', default=default_dburl, cast=dburl)
-}
+    'default' : {
+             'NAME': config('DATABASE_URL', default=default_dburl, cast=dburl),
+             'ENGINE': 'tenant_schemas.postgresql_backend',
+                }
+            }
 
+DATABASE_ROUTERS = (
+    'tenant_schemas.routers.TenantSyncRouter',
+)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -106,6 +126,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.request',
+    #...
+)
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
