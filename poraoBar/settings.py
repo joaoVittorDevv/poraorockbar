@@ -104,7 +104,7 @@ DATABASES = {
              'HOST': config('HOST'),
              'PASSWORD': config('PASSWORD'),
              'PORT': config('PORT'),
-             'ENGINE': config('ENGINE'),
+             'ENGINE': 'tenant_schemas.postgresql_backend',
                 }
             }
 
