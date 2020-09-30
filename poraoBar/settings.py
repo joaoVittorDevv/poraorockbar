@@ -32,9 +32,7 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', default=[], cast=Csv())
 SHARED_APPS = (
     'tenant_schemas',  # mandatory, should always be before any django app
     'poraoBar.core', # you must list the app where your tenant model resides in
-
     'django.contrib.contenttypes',
-
 )
 
 TENANT_APPS = (
@@ -99,12 +97,12 @@ WSGI_APPLICATION = 'poraoBar.wsgi.application'
 default_dburl = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
 DATABASES = {
     'default' : {
+             'ENGINE': 'tenant_schemas.postgresql_backend',
              'NAME': '%s' % config('NAME'),
              'USER': '%s' % config('USER'),
              'HOST': '%s' % config('HOST'),
              'PASSWORD': '%s' % config('PASSWORD'),
              'PORT': '%s' % config('PORT'),
-             'ENGINE': 'tenant_schemas.postgresql_backend',
                 }
             }
 
@@ -132,7 +130,6 @@ AUTH_PASSWORD_VALIDATORS = [
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
-    #...
 )
 
 # Internationalization
