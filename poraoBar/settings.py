@@ -99,8 +99,12 @@ WSGI_APPLICATION = 'poraoBar.wsgi.application'
 default_dburl = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
 DATABASES = {
     'default' : {
-             'NAME': config('DATABASE_URL', default=default_dburl, cast=dburl),
-             'ENGINE': 'tenant_schemas.postgresql_backend',
+             'NAME': config('NAME'),
+             'USER': config('USER'),
+             'HOST': config('HOST'),
+             'PASSWORD': config('PASSWORD'),
+             'PORT': config('PORT'),
+             'ENGINE': config('ENGINE'),
                 }
             }
 
